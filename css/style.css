@@ -1,0 +1,310 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-image: url("/css/img/draw2.jpg");
+    color: #485e74;
+    line-height: 1.6;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1em;
+}
+
+.container{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right:auto;
+    padding:1em;
+}
+
+.list-group-item {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+    border-left: transparent;
+    border-right: transparent;
+    list-style-type: none;
+    font-size: 1vw;
+    color: rgb(114, 135, 173);
+    background-color: transparent;
+}
+
+.brand{
+    text-align:center;
+    padding-bottom: 1em;
+    color:white;
+    font-family: 'Pacifico', cursive;
+    font-size: 3vw;
+}
+
+.brand span{
+   
+}
+
+.wrapper{
+    
+}
+
+.wrapper > * { 
+    padding: 1em;
+}
+
+.calculations{
+    background: #f9feff;
+}
+/*Calculator*/
+#calculator {
+	width: 325px;
+	position:relative ;
+	
+	padding: 20px 20px 9px;
+	background: rgb(233, 233, 232);
+  
+
+	border-radius: 3px;
+	box-shadow: 0px 4px rgb(200, 211, 245), 0px 10px 15px rgba(0, 0, 0, 0.2);
+	
+}
+
+/* Top portion */
+.top span.clear {
+	float: left;
+}
+
+.top .screen {
+	height: 40px;
+	width: 212px;
+	
+	float: right;
+	
+	padding: 0 10px;
+	
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+.keys, .top {overflow: hidden;}
+
+.keys span, .top span.clear {
+	float: left;
+	position: relative;
+	top: 0;
+	
+	cursor: pointer;
+	
+	width: 66px;
+	height: 36px;
+	
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	
+	margin: 0 7px 11px 0;
+	
+	color: #888;
+	line-height: 36px;
+	text-align: center;
+	user-select: none;
+	transition: all 0.2s ease;
+}
+
+.keys span.operator {
+	background: #FFF0F5;
+	margin-right: 0;
+}
+
+.keys span.eval {
+	background: #d3f3fd;
+	box-shadow: 0px 4px #5394a8;
+	color: #888e5f;
+}
+
+.top span.clear {
+	background: #ff9fa8;
+	box-shadow: 0px 4px #ff7c87;
+	color: white;
+}
+
+.keys span:hover {
+	background: #9c89f6;
+	box-shadow: 0px 4px #6b54d3;
+	color: white;
+}
+
+.keys span.eval:hover {
+	background: #abb850;
+	box-shadow: 0px 4px #717a33;
+	color: #ffffff;
+}
+
+.top span.clear:hover {
+	background: #f68991;
+	box-shadow: 0px 4px #d3545d;
+	color: white;
+}
+
+.keys span:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
+}
+
+.keys span.eval:active {
+	box-shadow: 0px 0px #717a33;
+	top: 4px;
+}
+
+.top span.clear:active {
+	top: 4px;
+	box-shadow: 0px 0px #d3545d;
+}
+
+/*Book*/
+
+.book {
+	transform-style: preserve-3d;
+	position: relative;
+	height: 300px;
+	left: 200px;
+	cursor: pointer;
+	backface-visibility: visible;
+
+  }
+  
+  .front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+	transform-style: preserve-3d;
+	position: absolute;
+	width: 220px;
+	height: 100%;
+	top: 0; left: 0;
+	transform-origin: left center;
+	transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
+	box-shadow: 0px 4px rgba(255, 255, 255, 0), 5px 5px 5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .front, .back {
+		background:  rgb(230, 205, 139);
+  }
+  
+  .front, .page1, .page3, .page5 {
+	border-bottom-right-radius: .5em;
+	border-top-right-radius: .5em;
+  }
+  
+  .back, .page2, .page4, .page6 {
+	border-bottom-right-radius: .5em;
+	border-top-right-radius: .5em;
+  }
+  
+  .page1 { 
+	background: #efefef;
+  }
+  
+  .page2 {
+	background: #efefef;
+  }
+  
+  .page3 {
+	background: #f5f5f5;
+  }
+  
+  .page4 {
+	background: #f5f5f5;
+  }
+  
+  .page5 {
+	background: #fafafa;
+  }
+  
+  .page6 {
+	background: #fdfdfd;
+  }
+  
+  .book:hover .front {
+	transform: rotateY(-160deg) scale(1.1);
+	box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .book:hover .page1 {
+	transform: rotateY(-150deg) scale(1.1);
+	box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .book:hover .page2 {
+	transform: rotateY(-30deg) scale(1.1);
+	box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .book:hover .page3 {
+	transform: rotateY(-140deg) scale(1.1);
+	box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .book:hover .page4 {
+	transform: rotateY(-40deg) scale(1.1);
+	box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .book:hover .page5 {
+	transform: rotateY(-130deg) scale(1.1);
+	box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .book:hover .page6 {
+	transform: rotateY(-25deg) scale(1.1);
+	box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  }
+  
+  .book:hover .back {
+	transform: rotateY(-20deg) scale(1.1);
+    }
+    
+.btn {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 1.2vw;
+}
+
+#bookname span {
+    font-family: 'Pacifico', cursive;
+    font-size: 1vw;
+}
+#bookname{
+    
+    text-align: center;
+}
+#firebase{
+    width:30%;
+}
+
+/* Media queries*/
+@media(min-width: 700px){
+    .wrapper{
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .wrapper > *{
+        padding: 2em;
+    }
+    
+    .brand{
+        text-align:center;
+    }
+}
+
+@media(max-width: 700px){
+    .wrapper{
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .wrapper > *{
+        padding: 2em;
+    }
+    
+    .brand{
+        text-align:left;
+    }
+}
