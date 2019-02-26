@@ -2,7 +2,7 @@
     box-sizing:border-box;
 }
 body{
-    background-image: url("/css/img/draw2.jpg");
+		background-image: url(img/draw2.jpg);
     color: #485e74;
     line-height: 1.6;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
